@@ -124,7 +124,6 @@ function collisionChecker() {
       const allBlocks = Array.from(
         document.querySelectorAll(".block")
       );
-      console.log(allBlocks);
       allBlocks[i].classList.remove("block");
       blockArray.splice(i, 1);
       changeDirection();
@@ -159,7 +158,7 @@ function collisionChecker() {
   //check for game over
   if (ballCurrentPosition[1] <= 0) {
     clearInterval(timerId);
-    score.innerHTML = "You suck";
+    scoreDisplay.innerHTML = "You suck";
     document.removeEventListener("keydown", moveUser);
   }
 }
